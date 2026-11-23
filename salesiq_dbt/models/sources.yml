@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: salesiq_raw
+    database: SALESIQ
+    schema: RAW
+    description: Snowflake landing tables populated from S3.
+    tables:
+      - name: customers_landing
+        description: One source row per customer record; PAYLOAD is VARIANT.
+      - name: orders_landing
+        description: One source row per order record; PAYLOAD is VARIANT.
+      - name: products_landing
+        description: One source row per product record; PAYLOAD is VARIANT.
+      - name: suppliers_landing
+        description: One source row per supplier record; PAYLOAD is VARIANT.
+      - name: shipping_landing
+        description: One source row per shipment record; PAYLOAD is VARIANT.
